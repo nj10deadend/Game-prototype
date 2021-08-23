@@ -1,0 +1,4 @@
+<App>
+
+
+<Header with Game Title />  <NavBar />   <Game />   <Comments />

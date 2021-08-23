@@ -1,0 +1,41 @@
+{
+
+
+    "reActors": [
+
+        { 
+            "id": 1,
+            "name": "sam",
+            "hometown": "THEBOOGIEDOWN"
+        }
+            ,
+        { 
+            "id": 2,
+            "name": "Burt",
+            "hometown": "THEBOOGIEDOWN"
+
+        }
+
+    ]
+
+    ,
+
+    "playerName": [
+
+        {
+            "id": 1,
+            "username": "",
+            "Health": "",
+            "Damage": "",
+            "species": "cat"
+        }
+        ,
+        {
+            "id": 2,
+            "name": "Joobly",
+            "species": "dog"
+        }
+
+    ]
+    
+}
