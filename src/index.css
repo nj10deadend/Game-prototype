@@ -12,6 +12,27 @@ code {
     monospace;
 }
 
-/* .buttons {
+/* .nav-bar {
+  background-color:aquamarine,
+  margin: center; 
+
 
 } */
+
+.navBar {
+  background-color: aquamarine;
+  font: bold;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  margin: auto;
+  padding: 10px;
+
+}
+
+.gameCards {
+  vertical-align: middle;
+}
+
+.optionsButtons {
+  vertical-align: middle;
+}

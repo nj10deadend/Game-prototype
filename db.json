@@ -1,41 +1,42 @@
 {
 
 
-    "reActors": [
-
-        { 
-            "id": 1,
-            "name": "sam",
-            "hometown": "THEBOOGIEDOWN"
-        }
-            ,
-        { 
-            "id": 2,
-            "name": "Burt",
-            "hometown": "THEBOOGIEDOWN"
-
-        }
-
-    ]
-
-    ,
-
-    "playerName": [
+    "script": [
 
         {
-            "id": 1,
-            "username": "",
-            "Health": "",
-            "Damage": "",
-            "species": "cat"
+            "start": {
+                "question": "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?!",
+                "img": "",
+                "answers": {
+                    "a": "Go To Patrick's house(...or rock I guess)",
+                    "b": "Go to Squidward's house",
+                    "c": "Feed Gary"
+                }
+            }
         }
         ,
         {
-            "id": 2,
-            "name": "Joobly",
-            "species": "dog"
+            "1_a": {
+                "question": "Gary cries as you walk out the door. You left him hungry and sad. Patrick emerges from his rock home and greets you. Patrick: `Hey Spongebob wanna go Jellyfishing??`",
+                "img": "",
+                "answers": {
+                    "a": "Yes",
+                    "b": "No, I have to go back and feed Gary"
+                }
+            }
         }
-
+        ,
+        {
+            "1_b": {
+                "question": "You get to Squidward's house and hear very bad clarinet music playing from his window. What do you do?",
+                "img": "",
+                "answers": {
+                    "a": "Call out to Squidward ",
+                    "b": "Enter his house through window",
+                    "c": "Feed Gary"
+                }
+            }
+        }
     ]
     
 }
