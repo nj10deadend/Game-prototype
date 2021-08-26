@@ -11,7 +11,7 @@ function NavBar () {
             <NavLink exact to="/"> Home </NavLink>
             <NavLink to="/game"> [Insert Game Title] </NavLink>
             <NavLink to="/feedback"> Feedback </NavLink>
-            <NavLink to="/filler"> Filler </NavLink>
+            <NavLink to="/BBInfo"> Life In Bikini Bottom </NavLink>
             
         </nav>
     );

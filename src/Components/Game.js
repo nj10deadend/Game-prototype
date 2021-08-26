@@ -1,42 +1,96 @@
+import { useState} from "react";
 function Game ({script}) {
 
-    const baseStart =   {
-        "start": {
-            "question": "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?!",
-            "img": "https://i.pinimg.com/474x/1a/23/2a/1a232aba094696c5a146aced5ede8e77--spongebob-brody.jpg",
-            "answers": {
-                "a": "Go To Patrick's house(...or rock I guess)",
-                "b": "Go to Squidward's house",
-                "c": "Feed Gary"
-            }
+
+    const [button, setButton] = useState(false)
+
+
+    
+
+    const [gameState, setGameState] = useState( {
+        choice: "Start", 
+        img: "https://i.pinimg.com/474x/1a/23/2a/1a232aba094696c5a146aced5ede8e77--spongebob-brody.jpg",
+        prompt: "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?", 
+        options: 
+        [
+        "Go To Patrick's house(...or rock I guess)",
+        "Go to Squidward's house",
+        ]
+        
+    } )
+
+    function finder(act, script) {
+        console.log(act)
+        console.log(script)
+        
+        let nextAct = script.find(eachScene => eachScene.choice === act)
+        console.log(nextAct)
+        setGameState(nextAct)
+    
+    } 
+    
+
+    function act(event) {
+
+        if (!button) {
+            console.log(event.target.textContent)
+            finder(event.target.textContent, script)
         }
+
     }
 
-    // const [gameScenario, setGameScenario] = useState(baseStart)
+    function renderImg2() {
+        if (gameState.img2 === undefined) {
+            return (
+                <></>
+            )
+        } else return (<img src={gameState.img2} alt="Image" />) 
+    }
 
-    // function scenarioSelector (gameScenario) {
+    function renderButton1() {
+        if (gameState.options === "") {
+            return (
+                null
+            )
+        } else return (
+            <button onClick={act} id="one" className="act-btn">{gameState.options[0] }</button> 
+        )
+    }
+    function renderButton2() {
+        if (gameState.options === "") {
+            return (
+                null
+            )
+        } else return (
+            <button onClick={act} id="one" className="act-btn">{gameState.options[1] }</button> 
+        )
+    }
 
-    //     return (
-            
-    //     )
- 
-    // }
+
 
 
     return (
     <>
-        <h1>This is the Game</h1>
+        <h2 >This is the Game</h2>
 
         <div className="gameCards">
-            <h3>Question goes here</h3>
-            <img />
+            <h3 className="prompt">{gameState.choice}</h3>
+            <h4>{gameState.prompt}</h4>
+
+            <img className="images" src={gameState.img} alt="Image"/>
+           
+            {renderImg2()}
             
 
-            <button id="one" className="optionsButtons">Option 1</button>
-            <button id="two" className="optionsButtons">Option 2</button>
-            <button id="three" className="optionsButtons">Option 3</button>
-
+                {/* <button onClick={act} id="one" className="act-btn">{gameState.options[0]}</button>
+    
+                <button onClick={act} id="two" className="act-btn">{gameState.options[1]}</button> */}
+                {renderButton1()}
+                {renderButton2()}
+                
         </div>
+
+        
 
     </>       
     )

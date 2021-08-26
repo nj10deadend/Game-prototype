@@ -1,42 +1,34 @@
 {
-
-
-    "script": [
-
-        {
-            "start": {
-                "question": "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?!",
-                "img": "",
-                "answers": {
-                    "a": "Go To Patrick's house(...or rock I guess)",
-                    "b": "Go to Squidward's house",
-                    "c": "Feed Gary"
-                }
-            }
-        }
-        ,
-        {
-            "1_a": {
-                "question": "Gary cries as you walk out the door. You left him hungry and sad. Patrick emerges from his rock home and greets you. Patrick: `Hey Spongebob wanna go Jellyfishing??`",
-                "img": "",
-                "answers": {
-                    "a": "Yes",
-                    "b": "No, I have to go back and feed Gary"
-                }
-            }
-        }
-        ,
-        {
-            "1_b": {
-                "question": "You get to Squidward's house and hear very bad clarinet music playing from his window. What do you do?",
-                "img": "",
-                "answers": {
-                    "a": "Call out to Squidward ",
-                    "b": "Enter his house through window",
-                    "c": "Feed Gary"
-                }
-            }
-        }
-    ]
-    
+    "comments": [
+    {
+      "id": 1,
+      "comment": "Loved it!",
+      "name": "Sandy"
+    },
+    {
+      "comment": "What a great game, had so much fun!",
+      "name": "Pearl",
+      "id": 2
+    },
+    {
+      "comment": "I want my money back arggg",
+      "name": "Mr. Krabs",
+      "id": 3
+    },
+    {
+      "comment": "MORE CHOOOOCLATEEEE",
+      "name": "Chocolate Guy",
+      "id": 4
+    },
+    {
+      "comment": "SpongeBob is an absolute hooligan",
+      "name": "Squidward",
+      "id": 5
+    },
+    {
+      "comment": "The game didn't give me any near death experiences like Spongebob has in real life, so it's a winner!",
+      "name": "Mrs. Puffs",
+      "id": 6
+    }
+  ]
 }

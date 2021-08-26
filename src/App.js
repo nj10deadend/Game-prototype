@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
 import { Route, Switch } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import NavBar from './Components/NavBar';
 import Game from './Components/Game';
 import Feedback from './Components/Feedback';
 import Home from './Components/Home';
 import Filler from './Components/Filler';
+import ScriptData from './Components/ScriptData';
 
 import StartButton from './Components/StartButton';
 
@@ -17,17 +17,22 @@ function App() {
 
   const [page, setPage] = useState("/")
 
+  const [script, setScript] = useState( [] );
   
 
-  const [script, setScript] = useState()
+  // const [script, setScript] = useState( [] )
 
-  const getFetchScript = () => {
-    fetch('')
-      .then(response => response.json())
-      .then(fetchedScript => 
-        setScript(fetchedScript)
-        );
-  }
+  // const getFetchScript = () => {
+  //   fetch('http://localhost:8008/script')
+  //     .then(response => response.json())
+  //     .then(fetchedScript => {
+  //       console.log(fetchedScript)
+  //       setScript(fetchedScript)
+  //     });
+  // }
+
+  // useEffect(getFetchScript, [])
+  // Bikini Bottom Times for Filler Tab
     
   return (
 
@@ -35,9 +40,9 @@ function App() {
       <NavBar onChangePage={setPage} />
       <Switch>
           <Route path="/game">
-              <Game scriptData={script}  />
+              <Game fetchedScript={script} script={ScriptData}/>
           </Route>
-          <Route path="/filler">
+          <Route path="/BBInfo"> 
               <Filler />
           </Route>
           <Route path="/feedback">
@@ -59,5 +64,3 @@ function App() {
 
 
 export default App;
-
-
