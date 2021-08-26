@@ -1,5 +1,5 @@
 {
-    "comments": [
+  "comments": [
     {
       "id": 1,
       "comment": "Loved it!",
@@ -29,6 +29,11 @@
       "comment": "The game didn't give me any near death experiences like Spongebob has in real life, so it's a winner!",
       "name": "Mrs. Puffs",
       "id": 6
+    },
+    {
+      "comment": "I feel personally attacked, the Chum Bucket is amazing. Whatever.",
+      "name": "Plankton",
+      "id": 7
     }
   ]
 }

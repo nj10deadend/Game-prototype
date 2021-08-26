@@ -1,14 +1,10 @@
 import { useState} from "react";
+import Marquee from "react-fast-marquee";
+
 function Game ({script}) {
-
-
     const [button, setButton] = useState(false)
-
-
-    
-
     const [gameState, setGameState] = useState( {
-        choice: "Start", 
+        choice: "Good Morning!", 
         img: "https://i.pinimg.com/474x/1a/23/2a/1a232aba094696c5a146aced5ede8e77--spongebob-brody.jpg",
         prompt: "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?", 
         options: 
@@ -18,7 +14,6 @@ function Game ({script}) {
         ]
         
     } )
-
     function finder(act, script) {
         console.log(act)
         console.log(script)
@@ -26,34 +21,30 @@ function Game ({script}) {
         let nextAct = script.find(eachScene => eachScene.choice === act)
         console.log(nextAct)
         setGameState(nextAct)
-    
     } 
-    
-
     function act(event) {
 
         if (!button) {
             console.log(event.target.textContent)
             finder(event.target.textContent, script)
         }
-
     }
-
     function renderImg2() {
         if (gameState.img2 === undefined) {
             return (
                 <></>
             )
-        } else return (<img src={gameState.img2} alt="Image" />) 
+        } else return (<img className='imgG' src={gameState.img2} alt="Image" />) 
     }
-
     function renderButton1() {
         if (gameState.options === "") {
             return (
                 null
             )
         } else return (
-            <button onClick={act} id="one" className="act-btn">{gameState.options[0] }</button> 
+           
+                <button onClick={act} className="button">{gameState.options[0] }</button>
+            
         )
     }
     function renderButton2() {
@@ -62,36 +53,31 @@ function Game ({script}) {
                 null
             )
         } else return (
-            <button onClick={act} id="one" className="act-btn">{gameState.options[1] }</button> 
+            <button onClick={act} className="button">{gameState.options[1] }</button> 
         )
     }
 
-
-
-
     return (
     <>
-        <h2 >This is the Game</h2>
-
-        <div className="gameCards">
-            <h3 className="prompt">{gameState.choice}</h3>
-            <h4>{gameState.prompt}</h4>
-
-            <img className="images" src={gameState.img} alt="Image"/>
-           
+         <h1 className='h1'>
+         <img className='SB' src='https://y.yarn.co/050564e9-27d7-4d9c-8b1b-08ed2d94b4b4_screenshot.jpg' alt='SpongeBoi'/>   
+             *~Adventures with Spongebob~*
+         <img className='PP' src='https://talkiesnetwork.files.wordpress.com/2020/05/08dd7-paintythepirate-2_1024x1024.jpg?w=930&h=450&crop=1' alt='Painty the Pirate'/>
+         
+         </h1>
+        <Marquee className='h2'>Are yah ready kids?!!</Marquee>
+        <br></br>
+        <div>
+        <img className='imgG' src={gameState.img} alt="Image"/>
+        <br></br>
+        <h3 className="homeText">{gameState.choice}</h3>
+        <br></br>
+        <h4 className="homeText">{gameState.prompt}</h4>
+        <br></br>
             {renderImg2()}
-            
 
-                {/* <button onClick={act} id="one" className="act-btn">{gameState.options[0]}</button>
-    
-                <button onClick={act} id="two" className="act-btn">{gameState.options[1]}</button> */}
-                {renderButton1()}
-                {renderButton2()}
-                
+                {renderButton1()} {renderButton2()}
         </div>
-
-        
-
     </>       
     )
 }

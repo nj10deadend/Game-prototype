@@ -1,38 +1,163 @@
 body {
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ }
+
+*{
+  text-align: center;
+  margin: auto;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* .nav-bar {
-  background-color:aquamarine,
-  margin: center; 
-
-
-} */
 
 .navBar {
-  background-color: aquamarine;
-  font: bold;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  margin: auto;
-  padding: 10px;
-
+  background-color: black;
+  color: white;
+  font-size:larger;
+  font-family: Impact;
+    text-align: center;
+  margin:auto;
+  padding: 20px;
 }
 
-.gameCards {
-  vertical-align: middle;
+.navLink{
+  color: white;
+  margin: 2%;
+  outline: auto;
 }
+
 
 .optionsButtons {
   vertical-align: middle;
+}
+
+#BI {
+  background-image: url('https://images2.minutemediacdn.com/image/upload/c_crop,h_1414,w_2101,x_10,y_0/v1588813744/shape/mentalfloss/65506-gettyimages-1045593054.jpg?itok=5LCrTexY');
+}
+
+.padding {
+  padding: 2%;
+}
+.imgH1 {
+ 
+  height: 600px;
+  width: 400px;
+  flex: 33.33%;
+  padding: 5px;
+  
+}
+.imgH2 {
+
+  height: 600px;
+  width: 800px;
+  flex: 33.33%;
+  padding: 5px;
+  line-height: 20px; 
+}
+
+.imgH3 {
+ 
+  height: 600px;
+  width: 400px;
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.imgG{
+  height: 200px;
+  width: 400px;
+  flex: 33.33%;
+  padding: 5px;
+  line-height: 20px; 
+}
+
+.h1 {
+background-color: black;
+color: white;
+padding: 1%;
+font-family: cursive;
+display: inline-block;
+margin-top: 0.25%;
+margin-bottom: 0.25%;
+}
+
+.h2{
+  background-color: black;
+color: white;
+padding: 1%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: larger;
+margin-top: 0.25%;
+margin-bottom: 0.25%;
+}
+
+.homeText{
+  background-color: black;
+  color: white;
+  padding: 1%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: inline-block;
+  margin-top: 0.25%;
+  
+}
+
+.hText{
+  background-color: black;
+  color: white;
+  padding: 2%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: inline-block;
+  margin-bottom: 3%;
+  
+}
+.PP{
+  height: 100px;
+  width: 200px;
+  margin-top: 1%;
+  float: right;
+}
+
+.SB{
+  height: 100px;
+  width: 200px;
+  margin-top: 1%;
+ float: left ;
+}
+.button {
+  background-color: black;
+  outline: auto;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+  padding: 0.5%;
+  display: inline-block;
+  margin-bottom: 0.25%;
+  margin-top: 0.25%;
+}
+
+
+#form{
+  padding: 2%;
+}
+
+.comment{
+  outline: auto;
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.5%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  outline-color: rgb(3, 167, 3);
+ 
+}
+
+.input {
+  font-size: larger;
+  margin-bottom: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }

@@ -1,6 +1,6 @@
 const ScriptData = [
     {
-        choice: "Start", 
+        choice: "Good Morning!", 
         prompt: "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?",
         img: "https://i.pinimg.com/474x/1a/23/2a/1a232aba094696c5a146aced5ede8e77--spongebob-brody.jpg", 
         options: 

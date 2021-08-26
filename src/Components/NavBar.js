@@ -1,17 +1,13 @@
 import { NavLink } from "react-router-dom"
 
-// script state
-// current script
-// useState holds one object that'll be put into card
-// const [script, setScript] = 
-
 function NavBar () {
     return (
         <nav className="navBar">
-            <NavLink exact to="/"> Home </NavLink>
-            <NavLink to="/game"> [Insert Game Title] </NavLink>
-            <NavLink to="/feedback"> Feedback </NavLink>
-            <NavLink to="/BBInfo"> Life In Bikini Bottom </NavLink>
+            <NavLink exact to="/" className='navLink'> Home </NavLink>
+            <NavLink to="/BBInfo" className='navLink'> Life In Bikini Bottom </NavLink>
+            <NavLink to="/game" className='navLink'> Adventures with SpongeBob </NavLink>
+            <NavLink to="/HWYS" className='navLink'> How was Your Stay? </NavLink>
+           
             
         </nav>
     );

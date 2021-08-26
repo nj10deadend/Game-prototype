@@ -1,14 +1,13 @@
 import React,{useEffect, useState} from 'react'
-import { findRenderedDOMComponentWithClass } from 'react-dom/cjs/react-dom-test-utils.production.min'
 import Comment from './Comment'
+import Marquee from "react-fast-marquee";
 
 function Feedback () {
 const [form,setForm] = useState ({
     comment: "", 
     name: ""})
 const [comm, setComm] = useState ([])
-// useEffect (fetch('http://localhost:3000/comments')
-// .then (x=>x.json()).then
+
 useEffect(()=>{
     fetch('http://localhost:3000/comments')
     .then (x=>x.json()).then(setComm)
@@ -44,20 +43,15 @@ function handleSubmit (b){
         setForm ({comment: "", 
         name: ""})
     })
-    
-    // add new comment
-    // addComm(newC)
-
-    // clear input field 
-   
 }
 
 
     return(
         <div>
-            <h1>Thoughts? Let us know below!</h1>
-            <form onClick={handleSubmit}>
-                <input
+            <h1 className='h1'>Thoughts?</h1>
+            <Marquee className='h2'>Let us know below!</Marquee>
+            <form id='form' onSubmit={handleSubmit}>
+                <textarea rows='3' cols='25'
                 type="text"
                 name="comment"
                 className="input"
@@ -65,7 +59,8 @@ function handleSubmit (b){
                 onChange= {changeForm}
                 placeholder='Insert Comment'
                 />
-
+                
+                <br></br>
 
                 <input
                 type="text"
@@ -76,12 +71,13 @@ function handleSubmit (b){
                 placeholder='Name'
                 />
 
+                <br></br>
 
                 <input
                 type="submit"
                 name="submit"
                 value="Submit"
-                className="input"
+                className="button"
                 />
             </form>
             <div>{displayComments()}</div>
