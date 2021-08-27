@@ -57,6 +57,30 @@ function Game ({script}) {
         )
     }
 
+    function buttonThreeConditional() {
+        if (gameState.options[2] === undefined) {
+            return (
+                <></>
+            )
+        } else return (<button onClick={act} id="two" className="button">{gameState.options[2]}</button>) 
+    }
+
+    function resetGame() {
+        setGameState(
+            {
+                choice: "Start", 
+                img: "https://c.tenor.com/y05bQXbwBIYAAAAM/sponge-bob-sleep.gif",
+                prompt: "Rise and shine its your day off from the Krusty Krab. What do you wanna do first?", 
+                options: 
+                [
+                "Go To Patrick's house(...or rock I guess)",
+                "Go to Squidward's house",
+                ]
+                
+            }
+        )
+    }
+
     return (
     <>
          <h1 className='h1'>
@@ -75,8 +99,10 @@ function Game ({script}) {
         <h4 className="homeText">{gameState.prompt}</h4>
         <br></br>
             {renderImg2()}
-
-                {renderButton1()} {renderButton2()}
+            <br></br>
+                {renderButton1()} {renderButton2()} {buttonThreeConditional()}
+                <br></br>
+                <button className='button' onClick={resetGame}>Reset</button>
         </div>
     </>       
     )
